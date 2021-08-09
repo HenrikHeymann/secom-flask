@@ -5,4 +5,4 @@ ADD . /SECOM_Flask
 
 RUN pip3 install -r requirements.txt
 ENV PYTHONPATH "${PYTHONPATH}:/SECOM_Flask"
-CMD ["python", "API/app.py"]
+CMD ["python", "api/app.py"]
