@@ -1,4 +1,4 @@
-from api.app import app
+from API.app import app
 
 application = app
 
