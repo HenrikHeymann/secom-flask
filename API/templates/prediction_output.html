@@ -1,0 +1,34 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="menu">
+
+    <h1>Prediction > Results</h1>
+
+    <!-- show time and date of prediction -->
+    <p>{{pred_to_print}}</p>
+
+    <!-- display table with prediction results -->
+    <p>{{ table|safe }}</p>
+
+</div>
+
+<script>
+  
+  // make reference to the table object
+  var table = document.getElementById('result_table');
+
+  // go through table and highlight fails
+  for (var r = 0, n = table.rows.length; r < n; r++) {
+      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+          if(table.rows[r].cells[c].innerHTML == "Fail")
+          {
+            table.rows[r].style.backgroundColor = "red";
+          }
+      }
+  }
+
+</script>
+
+{% endblock %}

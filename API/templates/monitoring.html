@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="menu">
+
+    <h1>Monitoring</h1>
+
+    <p>Performance on holdout data set.</p>
+
+    <table style="width:100%" id="result_table">
+         <tr>
+          <th>Version</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-Score</th>
+        </tr>
+        <tr>
+           <td>{{ver}}</td>
+           <td>{{acc}}</td>
+           <td>{{pre}}</td>
+           <td>{{rec}}</td>
+           <td>{{f1}} </td>
+        </tr>
+        <tr>
+          <!-- space for more model versions -->
+       </tr>
+
+
+      </table>
+
+</div>
+
+{% endblock %}

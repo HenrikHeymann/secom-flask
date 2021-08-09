@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="menu">
+
+  <h1>Prediction</h1>
+
+</div>
+
+   <div class = "box">
+
+    <h1>Make Prediction</h1>
+
+    <p>Select corresponding file from dropdown menu below.</p>
+
+    <form method="POST">
+     
+      <select name = "dropdown" id="selectNumber" >
+         <!-- <option value = "option_ID" selected>Option Name</option> -->
+
+         {% for file in list_of_files %}
+         <option value= "{{file}}" SELECTED>{{file}}</option>"
+         {% endfor %}
+
+
+      </select>
+
+      <input type="submit" value="Submit">
+   </form>
+
+  </div>
+  
+{% endblock %}

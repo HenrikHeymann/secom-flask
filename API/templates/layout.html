@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+  <head>
+    <title>SECOM Deployment</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title of web page -->
+    <title>SECOM Deployment</title>
+
+    <!-- icons -->
+    <link rel="icon" href="{{url_for('static', filename='images/favicon-32x32.png')}}" sizes=32x32>
+    <link rel="icon" href="{{url_for('static', filename='images/favicon-16x16.png')}}" sizes=16x16>
+
+    <!-- css stylesheet for design of elements -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+
+<!-- Body -->
+  <body>
+
+    <header class="header-basic">
+
+			<div class="header-limiter">
+
+        <!-- logo in the left corner can be used to get to the home page -->
+        <h1><a href="{{ url_for('.home') }}">SECOM Deployment</a></h1>
+
+        <!-- links to other endlinks on the right side of the page  -->
+				<nav>
+          <a href="{{ url_for('.home') }}">Home</a>
+          <a href="{{ url_for('.get_prediction') }}">Prediction</a>
+          <a href="{{ url_for('.get_evaluation') }}">Monitoring</a>
+          <!--
+          <a href="#">tbd</a>
+          -->
+				</nav>
+
+			</div>
+
+		</header>
+
+    <div class="container">
+      {% block content %}
+      <!-- space for the content of html files using this layout-->
+      {% endblock %}
+    </div>
+  </body>
+
+</html>
