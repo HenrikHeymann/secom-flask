@@ -7,7 +7,7 @@ from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin
 from configuration import OBJECT_FOLDER as objectfolder
 
 # import auxiliary methods necessary for pipeline
-from ML_model import preprocessors as pp
+from ml_model import preprocessors as pp
 
 # load objects from training
 mostly_empty_columns =  joblib.load(filename=os.path.join(objectfolder, "mostly_empty_columns.pkl"))

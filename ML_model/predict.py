@@ -11,8 +11,6 @@ from configuration import OBJECT_FOLDER as objectfolder
 # import trained pipeline
 trained_pipeline = joblib.load(os.path.join(objectfolder, "trained_pipeline.pkl"))
 
-#trained_pipeline = joblib.load("ML_model/Objects/trained_pipeline.pkl")
-
 def get_prediction_df(input_data):
     
     # convert input data into data frame
