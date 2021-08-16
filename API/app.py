@@ -30,6 +30,7 @@ def get_prediction():
         
         # files of production data are listed
         files = os.listdir(configuration.PRODUCTION_DATA_FOLDER)
+        files.sort()
 
         # list of files is passed to prediction_input.html
         # html file is returned and displayed
@@ -79,5 +80,5 @@ def get_evaluation():
 
 # main method
 if __name__ == '__main__':
-    app.run(debug=True, host = '0.0.0.0')
-    #app.run(debug=True)
+    #app.run(debug=True, host = '0.0.0.0')
+    app.run(debug=True)
