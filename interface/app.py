@@ -7,7 +7,7 @@ from flask import Flask, request, redirect, url_for, render_template
 
 # import of functionality within the application
 import configuration
-from ml_model import predict
+from model_pipeline import predict
 
 # definition of the app
 app = Flask(__name__)
